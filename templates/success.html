@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customize and export Wiki articles">
+    <meta name="author" content="S.R.Manikandasriram">
+    <title>Wiki-It &middot; Success!</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      .footer{
+        text-align:center;
+        padding:20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <h3 class="text-muted">Wiki-It</h3>
+      </div>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Success!</h1>
+        <p class="lead">Thank you for using Wiki-It. Your customized Wiki article will remain hosted on our site temporarily for 5 minutes.</p>
+        <p><a class="btn btn-large btn-success" id="copy-url" href="#">Copy link to Clipboard</a></p>
+      </div>
+      <div class="body-content">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>HTML to PDF online converter</h2>
+            <p>You can use any of the popular HTML to PDF converters available online. </p>
+            <p><a class="btn btn-default" target="_blank" href="http://htmlpdf.com/">Check it Now! &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Save as PDF Chrome extension</h2>
+            <p>You can also use the HTML to PDF chrome extension tool from pdfcrowd.</p>
+            <p><a class="btn btn-default" target="_blank" href="https://chrome.google.com/webstore/detail/save-as-pdf/kpdjmbiefanbdgnkcikhllpmjnnllbbc?hl=en">Get it Now! &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>HTML to DOC online converter</h2>
+            <p>You can use any of the popular HTML to Doc online converters for this purpose</p>
+            <p><a class="btn btn-default" target="_blank" href="#">View details &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+      <!-- /.body-content -->
+      <!-- Site footer -->
+      <div class="footer">
+        <p class="credit">Disclaimer: We only host the customized wiki article for you. The converters mentioned in this page are not ours.</p>
+      </div>
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="/static/js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.zclip.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#copy-url").zclip({
+          path: "http://www.steamdev.com/zclip/js/ZeroClipboard.swf",
+          copy: function(){
+            return "http://wiki-it-22162.apne1.actionbox.io:8080/{{ufname}}";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
