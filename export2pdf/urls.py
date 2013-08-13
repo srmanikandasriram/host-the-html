@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^upload/', 'export2pdf.views.upload', name='upload'),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT,}),
-    url(r'^download/', 'export2pdf.views.download', name='download'),
+    url(r'^download/(?P<ufname>.*)$', 'export2pdf.views.download', name='download'),
     # url(r'^export2pdf/', include('export2pdf.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
