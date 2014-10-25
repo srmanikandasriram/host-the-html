@@ -23,8 +23,17 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>Success!</h1>
-        <p class="lead">Thank you for using Wiki-It. Your customized Wiki article will remain hosted on our site temporarily for 5 minutes.</p>
-        <p><a class="btn btn-large btn-success" id="copy-url" href="#">Copy link to Clipboard</a></p>
+        <p class="lead">Thank you for using Wiki-It. Your PDF download will automatically start in a few seconds... </p>
+        <p><a class="btn btn-large btn-success" disabled="true" id="download-link" href="http://wiki-it-22162.apne1.actionbox.io:8080/download/{{ufname}}">Export as PDF</a> Powered by <a href="http://pdfcrowd.com/">pdfcrowd</a>.</p>
+      </div>
+      <p>Your customized Wiki article will remain hosted on our site temporarily for 5 minutes. You can use any other HTML to PDF converter using the following link</p>
+      <div class="row">
+        <div class="input-group col-lg-10">
+          <input type="text" class="form-control" disabled="disabled" value="http://wiki-it-22162.apne1.actionbox.io:8080/{{ufname}}">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="copy-url" type="button">Copy to Clipboard</button>
+          </span>
+        </div>
       </div>
       <div class="body-content">
         <!-- Example row of columns -->
@@ -63,6 +72,8 @@
             return "http://wiki-it-22162.apne1.actionbox.io:8080/{{ufname}}";
           }
         });
+        //window.open("http://wiki-it-22162.apne1.actionbox.io:8080/download/{{ufname}}");
+        setTimeout(function(){$("#download-link").removeAttr('disabled');},5000);
       });
     </script>
   </body>
